@@ -1,9 +1,11 @@
+/*selettore universale*/
 *{
     margin: 0;
     padding:0;
     box-sizing:border-box;
 }
 
+/*body*/
 body{
     background-image:url("../img/wall.png");   
 }
@@ -15,7 +17,7 @@ h1{
     font-size: 80px;
 }
 
-/*tutti i titolo*/
+/*tutti i titoli*/
 .title{
     font-family:'Edu Tas Beginner', sans-serif;
 }
@@ -63,3 +65,15 @@ h1{
     background-repeat:no-repeat;
 }
 
+/*gestione stile data delle foto*/
+.date {
+    font-family: 'Sometype Mono', monospace;
+    font-size:14px;
+    color:grey;
+    margin-top:10px;
+  }
+
+/*gestione titolo delle foto*/
+.picture-title{
+    font-size: 22px;
+}

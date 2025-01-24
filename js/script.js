@@ -49,11 +49,13 @@ axios.get(endpoint)
             card.addEventListener("mouseover", function () {
                 //aggiungo la classe 'rotate'
                 card.classList.add("rotate");
+                card.classList.add("hide-pin");
             });
             //aggiungo un evento ad ogni mouseout
             card.addEventListener("mouseout", function () {
                 //rimuovo la classe 'rotate'
                 card.classList.remove("rotate");
+                card.classList.remove("hide-pin");
             })
         })
     })

@@ -78,6 +78,12 @@ h1{
     text-transform: uppercase;
 }
 
+/*gestione rotazione card al mouseover*/
 .rotate{
     transform: rotate(30deg);
+}
+
+/*classe per nascondere il pin rosso al mouseover*/
+.card.hide-pin::before {
+    visibility:hidden;
 }

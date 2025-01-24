@@ -38,7 +38,6 @@ h1{
 
 /*gestione singole card*/
 .card{
-    align-content:center;
     background-color:white;
     padding:15px;
     flex-wrap:wrap;
@@ -77,4 +76,8 @@ h1{
 .picture-title{
     font-size: 22px;
     text-transform: uppercase;
+}
+
+.rotate{
+    transform: rotate(30deg);
 }

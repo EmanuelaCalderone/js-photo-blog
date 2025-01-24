@@ -15,7 +15,7 @@ axios.get(endpoint)
         //console.log(cards);
 
         //itero con un ciclo 'for' per tutta la lunghezza dell'array di oggetti in formato JSON
-        for (let i = 0; i < cards.length; i++){
+        for (let i = 0; i < cards.length; i++) {
 
             //assegno a una varibile l'elemento I-esimo dell'array
             const card = cards[i];
@@ -40,12 +40,28 @@ axios.get(endpoint)
             //console.log(container);
             //console.log(cards);
         }
-    })
 
+        //creo la variabile che conterrà le singole card selezionando gli elementi del DOM
+        const rotateCard = document.querySelectorAll(".card");
+        //creo un ciclo 'forEach'
+        rotateCard.forEach(card => {
+            //aggiungo un evento ad ogni mouseover
+            card.addEventListener("mouseover", function () {
+                //aggiungo la classe 'rotate'
+                card.classList.add("rotate");
+            });
+            //aggiungo un evento ad ogni mouseout
+            card.addEventListener("mouseout", function () {
+                //rimuovo la classe 'rotate'
+                card.classList.remove("rotate");
+            })
+        })
+    })
+    
     //gestione dell'errore
     .catch(error => {
         //da eseguire in caso di errore
         console.error(error)
-    })
+    });
         
  

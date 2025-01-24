@@ -76,4 +76,5 @@ h1{
 /*gestione titolo delle foto*/
 .picture-title{
     font-size: 22px;
+    text-transform: uppercase;
 }

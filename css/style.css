@@ -1,0 +1,56 @@
+/*selettore universale*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*body*/
+body{
+    background-image:url("../img/wall.png");   
+}
+
+/*titolo principale*/
+h1{
+    text-align:center;
+    padding:20px 0;
+    font-size: 80px;
+}
+
+/*tutti i titoli (principale e delle card)*/
+.title{
+    font-family:'Edu Tas Beginner', sans-serif;
+}
+
+/*container principale con le card*/
+#container{
+    margin:0 auto;
+    background-image:url("../img/cork.png");
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    width:100%;
+    gap:20px;
+    padding:40px 200px;
+}
+
+/*gestione dele singole card*/
+.card{
+    background-color:white;
+    padding:20px;
+    flex-wrap:wrap;
+    width:calc(33.3% - 80px);
+}
+
+/*gestione dei div che contengono le immagini*/
+.image{
+    width:100%;
+}
+
+/*gestione singole immagini*/
+.card img{
+    max-width:100%;
+}
+
+

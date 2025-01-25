@@ -7,7 +7,7 @@
 
 /*body*/
 body{
-    background-image:url("../img/wall.png");   
+    background-image:url("../img/wall.png");
 }
 
 /*titolo principale*/
@@ -24,30 +24,30 @@ h1{
 
 /*container principale con le card*/
 #container{
-    margin:0 auto;
     background-image:url("../img/cork.png");
     display:flex;
     justify-content:center;
-    align-items:center;
-    align-content:center;
     flex-wrap:wrap;
     width:100%;
-    gap:25px;
-    padding:40px 200px;
+    padding:60px 200px;
+    gap:20px;
 }
 
 /*gestione singole card*/
 .card{
     background-color:white;
-    padding:15px;
-    flex-wrap:wrap;
     position:relative;
+    cursor:pointer;
+    box-sizing: border-box;
+    padding:15px;
+    width: calc(33% - 20px);
+    max-width: 300px;
+    min-width: 200px;
 }
 
 /*gestione singole immagini*/
 .card img{
-    width:250px;
-    max-width:100%;
+    width:100%;
 }
 
 /*inserimento e gestione del pin rosso*/
@@ -67,8 +67,8 @@ h1{
 /*gestione stile data delle foto*/
 .date {
     font-family: 'Sometype Mono', monospace;
-    font-size:14px;
     color:grey;
+    font-size:14px;
     margin-top:10px;
   }
 
@@ -81,9 +81,58 @@ h1{
 /*gestione rotazione card al mouseover*/
 .rotate{
     transform: rotate(30deg);
+    z-index:200;
 }
 
 /*classe per nascondere il pin rosso al mouseover*/
 .card.hide-pin::before {
     visibility:hidden;
 }
+
+/*classe per nascondere*/
+.hide {
+    display: none;
+}
+
+/*classe per mostrare*/
+.show {
+    display:block;
+}
+
+/*div con sfondo trasparente con foto grade e bottone 'chiudi'*/
+.openPicture {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%; 
+    height: 100%;
+}
+
+/*gestione foto del div con sfondo trasparente*/
+.zoomPicture{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:80%;
+    height:80%;
+    object-fit:contain;
+}
+
+/*gestione bottone per chiudere l'immagine*/
+.btn {
+    position:absolute;
+    cursor:pointer;
+    background-color:white;
+    border:none;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top:50px;
+    padding:5px;
+}
+
+  

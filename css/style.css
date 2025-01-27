@@ -86,7 +86,14 @@ h1{
 /*gestione rotazione card al mouseover*/
 .rotate{
     transform: rotate(10deg);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     z-index:200;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*zoom quando la card si ruota*/
+.rotate:hover {
+    transform: rotate(10deg) scale(1.05);
 }
 
 /*classe per nascondere il pin rosso al mouseover*/

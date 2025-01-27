@@ -35,7 +35,7 @@ axios.get(endpoint)
                     <img class="picture" src="${url}" alt="${title}">
                 </div>
 
-            <div class=description>
+            <div class="info">
                 <!--sezione data-->
                 <p class="date">${date}</p>
                 <!--sezione titolo-->

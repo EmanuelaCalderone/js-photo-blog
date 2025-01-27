@@ -51,7 +51,6 @@ axios.get(endpoint)
            `;
             //console.log(container);
             //console.log(cards);
-
         }
 
         //creo la variabile che conterrà le singole card selezionando gli elementi del DOM

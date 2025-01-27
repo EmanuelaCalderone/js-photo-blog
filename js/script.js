@@ -35,11 +35,13 @@ axios.get(endpoint)
                     <img class="picture" src="${url}" alt="${title}">
                 </div>
 
+            <div class=description>
                 <!--sezione data-->
                 <p class="date">${date}</p>
                 <!--sezione titolo-->
                 <h4 class="title picture-title">${title}</h4>
-                
+            </div>    
+            
             </div>
 
             <div class="openPicture hide">

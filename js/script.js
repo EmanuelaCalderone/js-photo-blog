@@ -14,6 +14,9 @@ axios.get(endpoint)
         const cards = response.data;
         //console.log(cards);
 
+        //creo variabile di accumulo per le card;
+        let album = '';
+
         //itero con un ciclo 'for' per tutta la lunghezza dell'array di oggetti in formato JSON
         for (let i = 0; i < cards.length; i++) {
 
@@ -26,7 +29,7 @@ axios.get(endpoint)
             //console.log(card.date);
 
             //aggancio all'html le card popolandole con i valori ottenuti
-            container.innerHTML += `
+            album += `
             <div class="card">
                 <!--div immagine-->
                 <div class="image">
@@ -47,9 +50,13 @@ axios.get(endpoint)
             <img class="zoomPicture" src="${url}" alt="${title}">
             </div>
            `;
+
             //console.log(container);
             //console.log(cards);
         }
+
+        //inserisco dinamicamente l'html delle card nel container
+        container.innerHTML = album;
 
         
         //gestione rotazione card

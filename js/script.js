@@ -4,8 +4,6 @@ const container = document.getElementById("container");
 //assegno una variabile all'endpoint
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 
-
-
 //faccio la chiamata Ajax tramite Axios all'API che mi restituisce i dati 
 axios.get(endpoint)
     
@@ -53,6 +51,9 @@ axios.get(endpoint)
             //console.log(cards);
         }
 
+        
+        //gestione rotazione card
+
         //creo la variabile che conterrà le singole card selezionando gli elementi del DOM
         const rotateCard = document.querySelectorAll(".card");
 
@@ -60,19 +61,19 @@ axios.get(endpoint)
         rotateCard.forEach(card => {
             //aggiungo un evento ad ogni mouseover
             card.addEventListener("mouseover", function () {
-                //aggiungo la classe 'rotate'
-                card.classList.add("rotate");
-                //aggiungo la classe 'hide-pin'
-                card.classList.add("hide-pin");
+                //aggiungo la classe 'rotate' e 'hide-pin
+                card.classList.add("rotate", "hide-pin");
+               
             });
             //aggiungo un evento ad ogni mouseout
             card.addEventListener("mouseout", function () {
-                //rimuovo la classe 'rotate'
-                card.classList.remove("rotate");
-                //rimuovo la classe 'hide-pin'
-                card.classList.remove("hide-pin");
+                //rimuovo la classe 'rotate' e 'hide-pin'
+                card.classList.remove("rotate", "hide-pin");
             });
         });
+
+
+        //gestione click sulle immagini
 
         //creo la variabile che conterrà tutti gli elementi del DOM con classe 'picture' 
         const pictures = document.querySelectorAll(".picture");
@@ -93,7 +94,9 @@ axios.get(endpoint)
             });
         });
 
-        //creo la variabile che conterrà tutti gli elementi del DOM con classe 'btn' 
+        // gestione click bottone 'chiudi'
+    
+        //creo la variabile che conterrà tutti gli elementi del DOM con classe '.btn' 
         const buttons = document.querySelectorAll(".btn");
 
         //ciclo 'forEach' per iterare su ogni elemento di 'button'

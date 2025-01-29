@@ -4,7 +4,7 @@ const container = document.getElementById("container");
 //assegno una variabile all'endpoint
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/";
 
-//faccio la chiamata Ajax tramite Axios all'API che mi restituisce i dati 
+//faccio la chiamata Ajax tramite Axios all'endpoint dell'API che mi restituisce i dati 
 axios.get(endpoint)
     
     //gestisco la risposta ricevuta dall'API in caso di successo
